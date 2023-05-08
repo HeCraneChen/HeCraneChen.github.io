@@ -7,102 +7,339 @@
 
 <html lang="en">
 <head>
-  <title>John Doe</title>
+  <title>Crane Chen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+  <style>
+    a {
+      color: blue;
+    }
+
+    a:hover {
+      color: darkblue;
+    }
+
+    /* Navbar link color */
+  .navbar-inverse .navbar-nav > li > a {
+    color: gray;
+  }
+
+  /* Navbar link color on hover */
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: darkgray;
+  }
+
+  /* Grid container */
+  .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .centered-image {
+  display: block;
+  /* margin-left: auto; */
+  margin-left: 25.5%;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
+  }
+
+  .content-container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .content-container1 {
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px; /* Adjust the font size as needed */
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+ }
+
+  .content-text {
+    margin-left: 20px;
+  }
+
+  .content-text1 {
+    margin-left: 30px;
+  }
+
+
+  </style>
 </head>
 <body>
 
 
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
+		<!--Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
+				  <li><a href="index.html">About Me</a></li>
+          <li><a href="#softwares">Softwares</a></li> 
 				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
+				  <li><a href="./files/CraneAcademicCV.pdf">CV</a></li>
+          <li><a href="#sideprojects">Side Projects</a></li> 
+          <li><a href="new_students.html">New Students</a></li>
+          <li><a href="photography.html">Photography</a></li>
+          <!-- <li><a href="paintings.html">Paintings</a></li> -->
 		  </ul>
 		</div>
 	  </div>
 	</nav>
   
   <!-- Page Content -->
-    <div class="container">
+    <!-- <div class="container"> -->
+
+      <div class="col-md-12">
+        <div class="grid-container">      
+          <div style="display: inline-block;">
+            <img src="files/decor_prep1_left.png" alt="Description of your image" style="width: 220px; height: auto;"/>
+                    </div>
+        <div style="display: inline-block;">  
 
         <div class="row">
 
             <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
+            <!-- <div class="col-md-12">
+              <div class="grid-container"> -->
+            <!-- <div class="col-md-12" style="height: 100vh;"> -->
+              <!-- <div class="col-md-12"> -->
+                <!-- <div class="grid-container">       -->
+                  <div></div>  
+                  <!-- <div> -->
+                
+                
                 
                 <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <img class="img-responsive centered-image" src="./files/portrait2.png" alt="Description of the image" /><br>
+                <!-- <img class="img-responsive" src="./files/portrait2.png" alt="Description of the image" class="centered-image" /><br> -->
+                <div style="font-family: 'Noteworthy', sans-serif; font-size: 32px; text-align: center;"><b>Crane He Chen</b></div>
+                <!-- <br> -->
+                <p style="font-family: 'Noteworthy', sans-serif; font-size: 18px; text-align: center;">
+                  <!-- Ph.D. candidate in Computer Graphics<br>
+                  The Johns Hopkins University<br> -->
+                  <!-- 3400N Charles Street, Baltimore, MD, USA <br> -->
+                  <b>Ph.D. candidate in Computer Graphics</b> <br>
+                  <b>hchen136@jhu.edu</b> <br>
+               </p>
+
+               <div></div>
+              <!-- </div> -->
+
+              <!-- </div> -->
+               <!-- <div></div> -->
+              <!-- </div>  -->
+              <!-- <div></div> --> 
+
+              <!-- <div class="col-md-12">
+                <div class="grid-container">      
+                  <div style="display: inline-block;"> -->
+                        <!-- Add your image here -->
+                        
+
+
+                <div style="margin-top:3%; text-align:justify;">    
+                  <!-- <div class="col-md-12">
+                    <div class="grid-container">      
+                      <div></div>  
+                      <div> -->
+                      <p>I am a graduate student researcher specializing in surface reconstruction and geometric data processing. I am pursuing a Ph.D. degree at <a href="https://www.jhu.edu/">The Johns Hopkins University</a> under the guidance of prof. <a href="https://www.cs.jhu.edu/~misha/">Misha Kazhdan</a>.  I take great pride in being Misha's second Ph.D. student affiliated with the Department of Mechanical Engineering. Concurrently, I worked towards a Master of Science in Engineering (M.S.E.) in Computer Science at Hopkins.</p>
+                      
+                      <p>I am an enthusiast of images, surfaces, and volumes. I love my research. Computer Graphics unites the disciplines of mathematics, physics, and art, creating a captivating field of study. The dynamic nature of this intersection presents a plethora of exhilarating opportunities for exploration and discovery. I cannot think of more exciting things to investigate than this. </p> 
+                      
+                      <p> I trained myself in geometry for the second half of my PhD. Before that, I trained myself in 3d vision/robotics. In addition, I spent a year working at <a href="https://www.apple.com/">Apple</a> during the PhD. All the trainings has enabled me to effectively observe and address intriguing real-world challenges utilizing my geometric knowledge.</p>
+                      
+                      <p>I also devoted time to reading papers on diversity and inclusion, advocating for a welcoming work atmosphere that supports underrepresented communities in computer science and engineering. I served the position of social chair at <a href="https://gracejhu.github.io/">GRACE</a> and offered mentorship through <a href="https://wicsjhu.github.io/">WiCS</a> at Hopkins.</p>    
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      
+                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                      
+                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> -->
+                        <!-- </div> 
+                        <div></div> -->
+                    
+                          <!-- </div>
+                        </div>  -->
+    
+            <!-- Softwares -->
+            <!-- <div class="col-md-12">
+              <div class="grid-container"> -->
+            <!-- <div class="col-md-8" style="height: 100vh;">     -->
+              <h2 id="softwares">Softwares</h2>
+              <p>I enjoy coding, and actually, if I go too many consecutive days without it, I start to feel a bit strange.<br>
+                <br>
+                <div class="content-container">
+                  <img src="files/TotalCurvatureCalculator.png" alt="Image description" style="width: 100px; height: auto;">
+                  <div class="content-text">
+                <strong>TotalCurvatureCalculator</strong>
+              <!-- <ul> -->
+              <p>&bull; A C++ total curvature calculator works universally for both triangle meshes and point clouds, that is fast and robust.<br>
+              <p>&bull; Potenetial upcoming new feature for popular libraries, submitting to Libigl and Open3D.<br>
+              </div>
+              </div>
+              <br>
+              <br>
+                <!-- <p><a href="https://www.youtube.com/watch?v=xcUN1idRSBk">demo</a><br> -->
+
+
+              <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+              </ul> -->
+
+              <div class="content-container">
+              <img src="files/RoomPlan.png" alt="Image description" style="width: 100px; height: auto;">
+              <div class="content-text">
+              <strong><a href="https://developer.apple.com/augmented-reality/roomplan/">RoomPlan</a></strong>
+                <p>&bull; A Swift api for arkit, released at WWDC 2022.<br>
+              <p>&bull; I had the fortunate opportunity to be involved in this project during my time at Apple.<br>
+              </div>
+              </div>
+              <br>
+              <br>
+
+              <div class="content-container">
+                <img src="files/PoissonReconMatlab.png" alt="Image description" style="width: 100px; height: auto;">
+                <div class="content-text">
+                <strong><a href="https://github.com/HeCraneChen/poisson-recon-matlab.git">PoissonReconMatlab</a></strong>
+                  <p>&bull; An extensively streamlined Matlab implementation of <a href="https://github.com/mkazhdan/PoissonRecon.git">PoissonRecon</a>.<br>
+                  <p>&bull; Friendly for beginners, no octree, no any blackbox, implemented multigrid solver from scratch.<br>
+                  </div>
                 </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>John Doe</b></div><br>
-                <p><b>john at doe.com</b><br>
-                <p>Random Department<br>
-                University of Randomness<br>
-                Street<br>
-                City <br>
-                Country<br>
-                </p>
-            </div>
+          <!-- </div> -->
+        <!-- </div> 
+        <div></div> -->
             
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="#">Twitter</a></dd>
-              <dd><a href="#">LinkedIn</a></dd>
-            </div>
-            
-            
+       
             <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
+            <!-- <div class="col-md-8" style="height: 100vh;">     -->
                 <h2 id="publications">Publications</h2>
+
+                <br>
                 
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
+                <div class="content-container">
+                <img src="files/CurvaturePaper.png" alt="Image description" style="width: 200px; height: auto;">
+                <div class="content-text">
+                <strong>Estimating Discrete Total Curvature with Per Triangle Normal Variation</strong><br/>
+                <!-- <ul> -->
+                <p>SIGGRAPH 2023<br>
+                <p>Crane Chen<br>
+                <p>(project supervised by Misha Kazhdan, funded by departmental fellowship)<br>
+                </div>
+                </div>
+                <br>
 
+                <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+                </ul> -->
+
+                <br>
+                <div class="content-container">
+                <img src="files/Recon.png" alt="Image description" style="width: 200px; height: auto;">
+                <div class="content-text">
+                <strong>Towards Undoing Smoothness Bias for RGB Neural Surface Reconstruction</strong><br/>
+                <p>Under Review, 2023<br>
+                <p>Crane Chen, Joerg Liebelt<br>
+                <p>(project supervised by Misha Kazhdan, funded by Apple Inc.)<br>
+                </div>
+                </div>
+                <br>
             
+                <br>
+                <div class="content-container">
+                <img src="files/GCN.png" alt="Image description" style="width: 200px; height: auto;">
+                <div class="content-text">
+                <strong><a href="https://arxiv.org/abs/2104.05706">Towards Efficient Graph Convolutional Networks for Point Cloud Handling</a></strong><br/>
+                <p>ICCV, 2021<br>
+                <p>Yawei Li*, Crane Chen*, Zhaopeng Cui, Radu Timofte, Marc Pollefeys, Greg Chirikjian, Luc Van Gool<br>
+                <p>* stands for equal contributors<br>
+                <!-- <p><a href="https://arxiv.org/abs/2104.05706">paper</a>&emsp; code (reach out to first author)<br> -->
+                <ul>
+                <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li> -->
+                </ul>
+                </div>
+                </div>
+
+                <br>
+                <div class="content-container">
+                <img src="files/HumanPose.png" alt="Image description" style="width: 200px; height: auto;">
+                <div class="content-text">
+                <strong><a href="https://arxiv.org/abs/2007.10986">Multi-person 3D Pose Estimation in Crowded Scenes Based on Multi-View Geometry</a></strong><br/>
+                <p>ECCV, 2020 (SPOTLIGHT)<br>
+                <p>Crane Chen*, Pengfei Guo*, Pengfei Li, Gim Hee Lee, Greg Chirikjian<br>
+                <p>* stands for equal contributors<br>
+                  <!-- <p><a href="https://arxiv.org/abs/2007.10986">paper</a>&emsp; <a href="https://www.apple.com/">code</a><br> -->
+                <ul>
+                <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li> -->
+                </ul>
+                </div>
+                </div>
+
+                
+
+                <!-- <br>
+                <strong>Curvature: A Signature for Action Recognition in Video Sequences</strong><br/>
+                <p>CVPR 2020, Workshop of Differential Geometry in CVML<br>
+                <p>Crane Chen, Gregory Chirikjian<br>
+                <ul> -->
+                <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li> -->
+                <!-- </ul> -->
+
+            <!-- </div> -->
+          <!-- </div> 
+          <div></div> -->
+
+   
+            <!-- Side Projects -->
+            <!-- <div class="col-md-8" style="height: 100vh;">     -->
+              <h2 id="sideprojects">Side Projects</h2>
+              <p>Apart from research, I have a broader interest in problem-solving.<br>
+                <p>At Hopkins, it is typical for students to be assigned real-world issues as group projects. I spent a greater amount of time than most on enjoyable side projects.<br>
+                <br>
+              
+                <strong>Augmented Reality Suggestive Contours for Brain Surgery</strong>&emsp;<a href="https://www.youtube.com/watch?v=xcUN1idRSBk">demo</a><br>
+              <!-- <ul> -->
+              <p>&bull; Developed two apps for Microsoft Hololens with Unity, which involved features including gesture control, voice control, and gaze tracking.<br>
+              <p>&bull; Calculated suggestive contour of CAD models using OpenGL libraries. Applied the Vuforia marker to detect the 3D model position and overlay suggestive contours on a 3D printed model.<br>
+              <!-- <p><a href="https://www.youtube.com/watch?v=xcUN1idRSBk">demo</a><br> -->
+
+
+              <!-- <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
+              </ul> -->
+
+              <br>
+              <strong>Occlusion R-CNN for Pedestrian Detection</strong>&emsp;<a href="https://hub.jhu.edu/2019/06/11/ai-deep-learning/?fbclid=IwAR2LISu2PPEeTu5FO0_DgMTohPs1D8QGXFCJlHXUsp0SYDjCHXEWTkv7egM">demo</a><br>
+              <p>&bull; Appeared on the news at JHU.<br>
+              <p>&bull; Provided a solution for occlusion situation in pedestrian detection.<br>
+          
+              <br>
+              <strong>UR5 Robot Arm Playing Piano</strong>&emsp;<a href="https://www.youtube.com/watch?v=TKj5j9c6J_M&t=2s">demo</a><br>
+              <p>&bull; Developed an app with MATLAB and ROS, which enables UR5 automatically read-understand-play any encoded music score (i.e. a data set encoding notes).<br>
+            
+              </div> 
+              <div></div>
+          <!-- </div> -->
+
+
+          <!-- <div> -->
+            <!-- Content goes here -->
+          </div>
+          </div> 
+            <div style="display: inline-block;">
+            <img src="files/decor_prep1_right.png" alt="Description of your image" style="width: 200px; height: auto;"/>
         </div>
-
-
     </div>
+  </div>
+
+            
+        <!-- </div>
+
+
+    </div> -->
     <!-- /.container -->
     
     <!-- Other people may like it too! -->
