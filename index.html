@@ -30,13 +30,18 @@
 
     /* Navbar link color */
   .navbar-inverse .navbar-nav > li > a {
-    color: gray;
+    color: blue;
     font-size: 18px;
   }
 
   /* Navbar link color on hover */
   .navbar-inverse .navbar-nav > li > a:hover {
     color: darkgray;
+  }
+
+  .navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(0, 0, 0, 0);
   }
 
   /* Grid container */
@@ -88,31 +93,36 @@
 
 
 <!-- Navigation -->
-		<!--Collect the nav links, forms, and other content for toggling -->
+
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">About Me</a></li>
-          <li><a href="#softwares">Softwares</a></li> 
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="./files/CraneAcademicCV.pdf">CV</a></li>
-          <li><a href="#sideprojects">Side Projects</a></li> 
-          <li><a href="new_students.html">New Students</a></li>
-          <li><a href="photography.html">Photography</a></li>
-          <!-- <li><a href="paintings.html">Paintings</a></li> -->
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="#softwares">Softwares</a></li> 
+        <li><a href="#publications">Publications</a></li> 
+        <li><a href="./files/CraneAcademicCV.pdf">CV</a></li>
+        <li><a href="#sideprojects">Side Projects</a></li> 
+        <li><a href="new_students.html">New Students</a></li>
+        <li><a href="photography.html">Photography</a></li>
 		  </ul>
 		</div>
 	  </div>
 	</nav>
-  
-  <!-- Page Content -->
-    <!-- <div class="container"> -->
 
-      <div class="col-md-12">
-        <div class="grid-container">      
-          <div style="display: inline-block;">
-            <img src="files/decor_prep1_left.png" alt="Description of your image" style="width: 220px; height: auto;"/>
-                    </div>
-        <div style="display: inline-block;">  
+  <!-- Page Content -->
+    <div class="container">
+
 
         <div class="row">
 
@@ -122,11 +132,19 @@
             <!-- <div class="col-md-12" style="height: 100vh;"> -->
               <!-- <div class="col-md-12"> -->
                 <!-- <div class="grid-container">       -->
-                  <div></div>  
+                  <!-- <div></div>   -->
                   <!-- <div> -->
                 
+          <div class="col-md-2 hidden-sm hidden-xs">
+           <!-- <div class="grid-container">       -->
+            <!-- <div style="display: inline-block;"> -->
+              <img src="files/decor_prep1_left.png" alt="Description of your image" style="width: 220px; height: auto;"/>
+                      <!-- </div> -->
+          <!-- <div style="display: inline-block;">   -->
+          </div>
                 
                 
+          <div class="col-md-8">
                 <!-- Main Image -->
                 <img class="img-responsive centered-image" src="./files/portrait2.png" alt="Description of the image" /><br>
                 <!-- <img class="img-responsive" src="./files/portrait2.png" alt="Description of the image" class="centered-image" /><br> -->
@@ -140,7 +158,7 @@
                   <b>hchen136@jhu.edu</b> <br>
                </p>
 
-               <div></div>
+               <!-- <div></div> -->
               <!-- </div> -->
 
               <!-- </div> -->
@@ -222,8 +240,8 @@
                   </div>
                 </div>
           <!-- </div> -->
-        <!-- </div> 
-        <div></div> -->
+          <!-- </div> 
+          <div></div> -->
             
        
             <!-- Publications -->
@@ -337,11 +355,14 @@
 
           <!-- <div> -->
             <!-- Content goes here -->
-          </div>
+          <!-- </div> -->
           </div> 
+          <div class="col-md-2 hidden-sm hidden-xs">
             <div style="display: inline-block;">
             <img src="files/decor_prep1_right.png" alt="Description of your image" style="width: 200px; height: auto;"/>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
