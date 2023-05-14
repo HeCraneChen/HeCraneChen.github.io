@@ -31,7 +31,7 @@
 
     /* Navbar link color */
   .navbar-inverse .navbar-nav > li > a {
-    color: gray;
+    color: blue;
   }
 
   /* Navbar link color on hover */
@@ -40,8 +40,8 @@
   }
 
   .container {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   }
 
   /* .container {
@@ -61,12 +61,43 @@
     transform: scale(1.1);
   } */
 
+  .navbar-inverse {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(0, 0, 0, 0);
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: blue;
+  }
+
+  .navbar-inverse .navbar-brand {
+    color: blue;
+  }
+
+  .navbar-inverse .navbar-brand:hover {
+    color: blue;
+  }
   </style>
 </head>
 <body>
 
 
 <!-- Navigation -->
+
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+     
+      <a class="navbar-brand">Crane He Chen</a>
+     
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
 		<!--Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
@@ -84,22 +115,23 @@
 	</nav>
   
   <!-- Page Content -->
-  
-  <div class="col-md-12">
-    <div class="grid-container">      
-      <div style="display: inline-block;">
+  <div class="container">
+
+  <div class="row">
+
+    <div class="col-md-2 hidden-sm hidden-xs">
+        <!-- <div class="grid-container">      
+        <div style="display: inline-block;"> -->
         <img src="files/decor_prep3_left.png" alt="Description of your image" style="width: 240px; height: auto;"/>
-                </div>
-    <div style="display: inline-block;">  
-
-
+        <!-- </div> -->
+        <!-- <div style="display: inline-block;">   -->
+    </div>
 
       <!-- <div class="col-md-12">
         <div class="grid-container">      
           <div></div>  
           <div> -->
 
-        <div class="row">
 
             <!-- Entries Column -->
             <!-- <div class="col-md-10" style="height: 100vh;"> -->
@@ -107,7 +139,8 @@
                 <!-- Main Image -->
                 <!-- <img class="img-responsive" src="photo.gif" alt=""><br> -->
                 
-                <div style="margin-top:3%; text-align:justify;">  
+        <div class="col-md-8">
+          <div style="margin-top:3%; text-align:justify;">  
           
           <h2>Suggestions for fresh Ph.D. students</h2>
           <br>
@@ -202,9 +235,14 @@
             <!-- </div>  -->
 
           </div>
-        </div> 
-          <div style="display: inline-block;">
+        <!-- </div>  -->
+        <!-- </div> -->
+         
+        <div class="col-md-2 hidden-sm hidden-xs">
+          <!-- <div style="display: inline-block;"> -->
           <img src="files/decor_prep3_right.png" alt="Description of your image" style="width: 210px; height: auto;"/>
+        </div>
+
       </div>
   </div>
 </div>
@@ -212,13 +250,13 @@
           <!-- </div> 
           <div></div> -->
 
- 
-    </div>
+        
     <!-- /.container -->
     
     <!-- Other people may like it too! -->
     <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
     
+
 </body>
 
 </html>
