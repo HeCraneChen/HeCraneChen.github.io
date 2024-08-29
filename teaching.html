@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crane's Intro to Graphics Course</title>
+    <style>
+        h1 {
+          font-size: 24px; /* Adjust size as needed */
+        }
+        h2 {
+          font-size: 18px; /* Adjust size as needed */
+        }
+      .header-wrapper {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+      }
+      .header-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 5px; /* Reduced space between the video and text */
+      flex-wrap: wrap; /* Keeps the layout responsive */
+      }
+
+      .text-container h1, .text-container h3 {
+          margin: 0;
+      }
+
+      video {
+          max-width: 30%; /* Ensures the video takes up 30% of the container */
+          height: auto;
+      }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+            text-align: center;
+        }
+        .centered {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <img src="files/cover.png" alt="Image 4" style="width: 100%; height: auto;">
+
+  <!-- <video autoplay loop muted playsinline style="width: 30%; height: auto;">
+    <source src="./files/58336612022349336143728e1cb433a91ee2bd3000d3b42.mp4" type="video/mp4">
+ </video> -->
+
+    <h2>Instructor</h2>
+    <p>Crane He Chen</p>
+    <p>Email: <a href="mailto:h.chen1@northeastern.edu">h.chen1@northeastern.edu</a></p>
+    
+    <h2>Teaching Assistant</h2>
+    <p>Abhijeet Chowdhury</p>
+    <p>Email: <a href="mailto:chowdhury.ab@northeastern.edu">chowdhury.ab@northeastern.edu</a></p>
+
+    <!-- <h2>Syllabus</h2>
+    <p><a href="./files/LaplacianCourse_Syllabus.pdf" target="_blank">Download Syllabus</a></p> -->
+
+    <h2>Suggested Reading And Playground</h2>
+    <ul>
+      <li>Reading makes us smarter! There's only so much an instructor can cover. But reading books can provide you more. I encourage you to commit to read at least one of the books from the list page to page. This might not directly help with your grade, because the improvement is not observable overnight. But it's very beneficial to develop your depth of thinking. I hope you are excited to read and can be persistent. If you have the budget to get hard copy of one book and commit, I encourage it.</li>
+      <div class="image-row">
+            <img src="files/fundamentals_of_computer_graphics.jpg" alt="Image 1" style="width: 10.4%; height: auto;">
+        </a>
+            <img src="files/polygon_mesh_processing.jpg" alt="Image 3" style="width: 9%; height: auto;">
+        </a>
+            <img src="files/diff_geometry.jpg" alt="Image 4" style="width: 8.9%; height: auto;">
+        </a>
+            <img src="files/TheSymmetriesOfThings.png" alt="Image 2" style="width: 10.5%; height: auto;">
+        </a>
+    </div>
+    
+      <li>Always ready to get your hands dirty! We are all software engineers to some point, regardless rank/title. To do well in graphics, it adds on top understanding artists needs. Take it as leisure to follow one of the suggested tutorials (Applied Houdini, or Blender Donut), and check out what top-notch software tools can do and can't do. Don't just watch the videos. In order for learning to happen, you need to install the software and follow the videos step by step to implement. </li>
+      <a href="https://www.appliedhoudini.com/">
+        <!-- <img src="files/houdini_tutorial.png" alt="Applied Houdini" style="width: 13.35%; height: auto;"> -->
+        <video autoplay loop muted playsinline style="width: 16.7%; height: auto;">
+          <source src="./files/houdini_tutorial.mp4" type="video/mp4">
+      </video>
+        <!-- <img src="files/houdini_tutorial.png" alt="Applied Houdini" style="width: 13.35%; height: auto;"> -->
+      </a>
+      <!-- </p> -->
+      <a href="https://www.youtube.com/watch?v=B0J27sf9N1Y&list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z">
+        <img src="files/blender_tutorial.png" alt="Blender 4.0 Beginner Donut Tutorial" style="width: 12%; height: auto;">
+      </a>
+      </p>      
+      <!-- <a href="https://www.appliedhoudini.com/">Applied Houdini</a></p>
+      <a href="https://www.youtube.com/watch?v=B0J27sf9N1Y&list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z">Blender 4.0 Beginner Donut Tutorial</a></p> -->
+    </ul>
+
+    <h2>Course Information</h2>
+    <p>This course provides a fundamental introduction to computer graphics with hands-on opportunities. We cover four main subfields of graphics in the lectures, including rendering, geometry, animation, and simulation. The focus is geometry. We begin our journey from image processing, spend time studying the rendering of three-dimensional scenes using ray-tracing techniques, adding texture to surfaces, exploring the tessellation problem on Euclidean plane with wallpaper groups, and looking into how to animate an animal in a industrial pipeline. During the lectures, there will be a short break every 45 minutes, because super long didactive lectures are unhelpful for focusing. During the break, we will be watching either two SIGGRAPH technical paper trailors from the past 10 years or a classical short computer animation movie.</p>
+
+    <h2>Course Objectives</h2>
+    <p>By the end of this course, you will be ready to</p>
+    <ul>
+      <li>Build graphics applications with C++.</li>
+      <li>Be ready to take more advanced graphics courses (e.g. Computational Geometry, Computer Animation, Geometry Processing, Discrete Differential Geometry, Neural Geometry Processing).</li>
+      <li>Position yourself for jobs in gaming, entertainment, chip industry involving graphics, NASA or other national labs involving scientific visualization.</li>
+    </ul>
+
+    <h2>Prerequisites</h2>
+    <ul>
+      <li>Some knowledge of linear algebra.</li>
+      <li>You know one programming language well. Very likely this is Java or Python. In this course, we are going to use C++. It is my expectation that you have not seen C++ before. You can transition to it from other languages under my guidance. For the record, C++ is the industry standard because you need it to modify/customize a graphics library. It is a necessary skill, to independently contribute any fundamental change to the libraries. 
+        We are going to specifically use modern C++ (14/17/20).</li>
+      <p>Q: "Is this scary though?"</p>
+      <p>A: "No. It is just new. I can do everything to help you speed up. And you only need to learn the parts as you need."</p>
+   </ul>
+
+    <h2>Rubric (it is possible to earn more than 100%)</h2>
+    <ul>
+      <li>4 coding assignments (at home, C++). Assignments are designed to be independent on purpose. So that you are not punished multiple times for bugs from a previous assignment. With that said, you’re welcome to combine the code from previous assignments if that makes the art contest cooler.  In total 70%.</li>
+      <li>No final, 2 quiz-like midterms, 10 short questions each. Tentative dates for midterms (subject to adjustment at the instructor's discreetionary): midterm1 October 15, midterm2 November 19. Each 15%.</li>
+      <li>Each assignment should be considered as a separate art contest. One winner is selected per assignment to get some extra credit. 7% tops, at the instructor's discretionary.</li>
+      <li>If the student finished reading at least 3 book chapters of the suggested books, or accomplished a Houdini/Blender demo by following the suggested tutorials, it's possible to get extra credit with a final presentation. If you're doing the demo, the presentation needs to include a live walkthrough of how you got the result, not only showing the result. 15% tops, at the instructor's discretionary.</li>
+      <li>Mini coding/math exercises (in class, python/pencil). Pair-coding. Not graded.</li>
+    <li><p>The grade system follows the University Grading System:</p>
+    <ul>
+        <li><strong>A</strong>  = 95+</li>
+        <li><strong>A-</strong> = 91 – 94</li>
+        <li><strong>B+</strong> = 87 – 90</li>
+        <li><strong>B</strong>  = 83 – 86</li>
+        <li><strong>B-</strong> = 80 – 82</li>
+        <li><strong>C+</strong> = 77 – 79</li>
+        <li><strong>C</strong>  = 73 – 76</li>
+        <li><strong>D+</strong> = 67 – 69</li>
+        <li><strong>D</strong>  = 63 – 66</li>
+        <li><strong>F</strong>  = 0 – 62</li>
+    </ul></li>
+
+  </ul>
+
+
+    <h2>Course Policies</h2>
+    <ul>
+      <li>You are not allowed to find a partner or collaborator to write the code of assignments. Learning happens when coding happens. You need to rely on yourself. If two identical assignments are handed in, both students will be accountable for cheating (no questions asked), and you will get zero for the entire course (not just the assignment).</li>
+      <li>It is ok to use ChatGPT for debugging but not ok for generating code. Meaning you can copy and paste your error message and ask ChatGPT what it means/how to fix it. You cannot input the assignment description and ask ChatGPT to implement things for you. If you did use ChatGPT, which is expected, you’d need to include a proper citation in your homework submission. The citation means screenshots of what exactly you put as prompts, and what answers you got. The reason is you need to have insights in order to earn any credit for your assignments.</li>
+      <li>Throughout the semester, you have in total 4 unexcused late days (no explanation needed), and 2 excused late days (I will ask what happened). In order to use the late days, you need to include at the beginning of the submitted html file how many late days you used for this specific assignment. (Hint: Assignments 1 and 4 are relatively lighter. You might want to use your late days on Assignments 2 and 3.)</li>
+      <li>You are encouraged to post questions/bugs on Piazza for open discussion.</li>
+    </ul>
+
+    
+    <h2>Intended Course Roadmap</h2>
+    <video autoplay loop muted playsinline style="width: 30%; height: auto;">
+      <source src="./files/58336612022349336143728e1cb433a91ee2bd3000d3b42.mp4" type="video/mp4">
+   </video>
+    <table>
+        <tr>
+            <th>Week Num.</th>
+            <th>Lecture Slides</th>
+            <th>Other Helpful Resources</th>
+        </tr>
+        <tr>
+            <td>Week 1</td>
+            <td>Welcome</td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>Week 2</td>
+          <td>Math Preliminary</td>
+          <td></td>
+        </tr>
+        <tr>
+            <td>Week 3</td>
+            <td>Software Tools Part 1 (Linux/Unix commands, CMake, basics of modern C++, Libigl, Polyscope)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Week 4</td>
+            <td>Spatial Transformations</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Week 5</td>
+            <td>"Morfing"</td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>Week 6</td>
+            <td>Software Tools Part 2 (How to write a GUI)</td>
+            <td></td>
+        </tr>
+        <tr>
+          <td>Week 7</td>
+          <td>Rendering Equation</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Week 8</td>
+          <td>Homography And Texture</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Week 9</td>
+          <td>Intro To Tiling Theory</td>
+          <td></td>
+        </tr>
+        <tr>
+            <td>Week 10</td>
+            <td>Intro To Geometry Part 1</td>
+            <td></td>
+        </tr>
+            <td>Week 11</td>
+            <td>Intro To Geometry Part 2</td>
+            <td></td>
+        </tr>
+            <td>Week 12</td>
+            <td>Intro To Animation</td>
+            <td></td>
+        </tr>
+            <td>Week 13</td>
+            <td>Intro To Neural Geometry Processing And Neural Simulation</td>
+            <td></td>
+        </tr>
+           <td>Week 14</td>
+            <td>PDE Strikes Back</td>
+            <td></td>
+        </tr>
+    </table>
+
+
+<!-- <h2>Gallery of Art Contest</h4> 
+<div class="col-md-2 hidden-sm hidden-xs">
+  <div style="display: inline-block;">
+    <img class="center-block" src="files/Ashley.png" alt="Description of your image" style="width: auto; height: 200px;"/>
+    <img class="center-block" src="files/Teddy.png" alt="Description of your image" style="width: auto; height: 200px;"/>
+    <img class="center-block" src="files/Simcha.png" alt="Description of your image" style="width: auto; height: 200px;"/>
+    <img class="center-block" src="files/Amy.png" alt="Description of your image" style="width: auto; height: 250px;"/>
+    <video class="center-block" style="width: auto; height: 250px;" controls autoplay loop>
+      <source src="files/Mirra.mov" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <img class="center-block" src="files/Elysa.png" alt="Description of your image" style="width: auto; height: 250px;"/>
+</div> -->
+
+
+<!-- <h2>Resources for Reference</h2> -->
+
+
+<!-- <p><strong>Don’t need to freak out if you find the contents below quite advanced.</strong></p>
+
+<p><em>Note: Our course has no prerequisites, focuses on intuitions, so we are doing lots of handwavings here and there when it comes to math. But it would be beneficial to point you to resources mathematically rigorous in case you are interested in digging further in the future. Lectures I mentioned are the most relevant. In general, the whole playlists are good contents. The books are rigorous to another level. Those are super well-written textbooks though. You might find them not that hard to follow.</em></p> -->
+
+<!-- <h3>Optional lectures</h3>
+
+<ul>
+    <li>Shape Analysis, Justin Solomon, MIT
+        <ul>
+            <li>Lectures 12, Lecture14, Lecture14 Extra Content, Lecture 15 from this playlist: <a href="https://www.youtube.com/watch?v=VjyBp6PrvB4&list=PLQ3UicqQtfNtUcdTMLgKSTTOiEsCw2VBW" target="_blank">YouTube Playlist</a></li>
+        </ul>
+    </li>
+    <li>Discrete Differential Geometry, Keenan Crane, CMU
+        <ul>
+            <li>Lecture 18 from this playlist: <a href="https://www.youtube.com/watch?v=mas-PUA3OvA&list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS&index=1" target="_blank">YouTube Playlist</a></li>
+        </ul>
+    </li>
+    <li>A Quick Introduction to the Laplacian and Bilaplacian Through the Theory of PDEs, Oded Stein, USC: <a href="https://www.youtube.com/watch?v=LUcn9GzhFDA&t=271s" target="_blank">YouTube Video</a></li>
+</ul>
+
+<h3>Optional textbooks</h3>
+
+<ul>
+    <li>Botsch M, Kobbelt L, Pauly M, Alliez P, Lévy B., Polygon Mesh Processing, CRC Press (2010)</li>
+    <li>Mantredo Carmo, Differential Geometry of Curves and Surfaces (2016)
+        <ul>
+            <li>Online access: <a href="http://www2.ing.unipi.it/griff/files/dC.pdf" target="_blank">PDF</a></li>
+        </ul>
+    </li>
+</ul> -->
+
+
+</body>
+</html>
