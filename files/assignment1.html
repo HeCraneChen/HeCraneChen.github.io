@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image morfing Assignment</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .policy {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image morfing Assignment</h1>
+
+    <div class="section">
+        <h2>Release Time and Deadline</h2>
+        <p><strong>Release Time:</strong> September 29, 11:59 PM</p>
+        <p><strong>Submission Deadline:</strong> October 13, 11:59 PM</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Download the Code and Unit Test Data</h2>
+        <p>
+            You can download the complete code and test images as a zip file from the following link:
+        </p>
+        <p>
+            <a href="https://www.icloud.com/iclouddrive/03bU5bDeelWePYQivNIXAUdcA#Assignment1" download>Assignment1.zip</a>
+        </p>
+        <p>
+            This zip file contains all the source code required to implement the image morfing algorithm, along with example images for testing.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. How to Compile and Run the Code</h2>
+        <h3>2.1 Compiling the Code</h3>
+        <p>Follow these steps to compile the code:</p>
+        <ol>
+            <li>Navigate to the assignment folder:</li>
+            <p><code>cd /path_to/Assignment1</code></p>
+            <li>Create a build directory:</li>
+            <p><code>mkdir build</code></p>
+            <li>Navigate to the build directory:</li>
+            <p><code>cd build</code></p>
+            <li>Generate build files using CMake:</li>
+            <p><code>cmake ..</code></p>
+            <li>Compile the code:</li>
+            <p><code>make</code></p>
+        </ol>
+        <p>Once the code is compiled, you will have an executable named <code>ImageMorfingMethod</code> in the build directory.</p>
+
+        <h3>2.2 Running the Image morfing Program</h3>
+        <p>
+            To run the image morfing program, use the following command:
+        </p>
+        <pre><code>
+./ImageMorfingMethod --in ../example_data/F.bmp --dest ../example_data/F_rotated.bmp --out ../result
+        </code></pre>
+        <p>Here’s what each argument means:</p>
+        <ul>
+            <li><code>--in</code>: Specifies the source image that will be morphed.</li>
+            <li><code>--dest</code>: Specifies the destination image that the source will morph into.</li>
+            <li><code>--out</code>: Specifies the output folder where the morphed images will be saved (30 images in total).</li>
+        </ul>
+        <p>The program will save the morphed images as <code>output_00.jpg</code>, <code>output_01.jpg</code>, ..., up to <code>output_30.jpg</code> in the specified output folder.</p>
+    </div>
+
+    <div class="section">
+        <h2>3. File Breakdown</h2>
+        <p>
+            Below is a brief description of what each source file in the project does.
+        </p>
+
+        <h3>3.1 Header Files</h3>
+        <ul>
+            <li><code>image.h</code>: Defines the <code>ImageProcessor</code> class, which is responsible for handling the Beier-Neely image morfing process. This includes methods for computing the weighted transformations of image points.</li>
+            <li><code>line_segments.h</code>: Defines the <code>OrientedLineSegment</code> and <code>OrientedLineSegmentPairs</code> classes, which represent the control line segments used in the morfing process. These line segments define how the source image morphs into the destination image.</li>
+        </ul>
+
+        <h3>3.2 CPP Files</h3>
+        <ul>
+            <li><code>main.cpp</code>: This is the entry point for the program. It handles command-line argument parsing, reading the input and destination images, performing the image morfing for each frame, and saving the results to the output folder.</li>
+            <li><code>image_todo.cpp</code>: Implements the methods defined in <code>image.h</code>, including the main morfing function. It computes how each pixel in the source image should be transformed and interpolated based on the control line segments.</li>
+            <li><code>line_segments.cpp</code>: Implements the classes from <code>line_segments.h</code>. This file handles the logic for how the control line segments are applied to the morfing process, including calculating the weight and transformation for each pixel. These are some helper functions to make your life easier. You may use or not use them as needed.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Files You Should Mainly Be Touching and Working With</h2>
+        <p>
+            The main files you need to work with for the assignment are:
+        </p>
+        <ul>
+            <li><code>main.cpp</code>: In this file, you will define the line segments for the morfing process. There are placeholder lines like:
+                You should replace these with actual control points that define how your source image should morph into your destination image.
+            </li>
+            <li><code>image_todo.cpp</code>: This file contains the logic for applying the Beier-Neely morfing algorithm. You need to complete the function <code>BeierNeelyMorph</code> by implementing the transformations based on the control line segments you define.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Expected Submission</h2>
+        <p>When you complete the assignment, your submission should be a zip file containing the following:</p>
+        <ul>
+            <li><strong>Source code</strong>: Your modified source code files, including <code>main.cpp</code> and <code>image_todo.cpp</code>, with your implemented morfing algorithm.</li>
+            <li><strong>All data involved</strong>: Include the example images and any custom data you used for your morfing process.</li>
+            <li><strong>HTML file showcasing your results</strong>: This should include both the results on the unit test data provided with the assignment and any artistic results you generated on your own data (for an art contest). For this specific assignment, the art contest should have the format of a video.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. References</h2>
+        <p>If you need more information about the image morfing algorithm, please refer to the lecture slides and the paper <a href="./files/beier92.pdf" target="_blank">Feature-Based Image Metamorphosis</a> by Beier and Neely, which describes the core principles of the technique.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Policy</h2>
+        <p>
+            *You are not allowed to distribute your solution to this homework either online or to other students without permission.
+        </p>
+    </div>
+
+</body>
+</html>
