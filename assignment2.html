@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peek the museum through a glass egg!</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .policy {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Peek the museum through a glass egg!</h1>
+
+    <div class="section">
+        <h2>Release Time and Deadline</h2>
+        <p><strong>Release Time:</strong> October 17, 11:59 PM</p>
+        <p><strong>Submission Deadline:</strong> November 7, 11:59 PM</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Download the Code and Unit Test Data</h2>
+        <p>
+            You can download the complete code and test images as a zip file from the following link:
+        </p>
+        <p>
+            <a href="https://www.icloud.com/iclouddrive/033kZ7rWBNcRxdnYuTKka1r3A#Assignment2" download>Assignment2.zip</a>
+        </p>
+        <p>
+            This zip file contains all the source code required to implement the image ray tracing algorithm, along with example images for testing.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. How to Compile and Run the Code</h2>
+        <h3>2.1 Compiling the Code</h3>
+        <p>Follow these steps to compile the code:</p>
+        <ol>
+            <li>Navigate to the assignment folder:</li>
+            <p><code>cd /path_to/Assignment1</code></p>
+            <li>Create a build directory:</li>
+            <p><code>mkdir build</code></p>
+            <li>Navigate to the build directory:</li>
+            <p><code>cd build</code></p>
+            <li>Generate build files using CMake:</li>
+            <p><code>cmake ..</code></p>
+            <li>Compile the code:</li>
+            <p><code>make</code></p>
+        </ol>
+        <p>Once the code is compiled, you will have an executable named <code>Assignment2</code> in the build directory .</p>
+
+        <h3>2.2 Running the ray tracing program</h3>
+        <p>
+            To run the image ray tracing program, use the following command:
+        </p>
+        <p><code> cd Bin</code></p>
+        <p><code> ./Assignment2 --in "path to test.point.ray" –out "path to output image file"</code></p>
+    </div>
+
+    <div class="section">
+        <h2>3. File Breakdown</h2>
+        <p>
+            Below is a brief description. Don't try to start by understanding all the files. Only try to understand the functions you neede would be enough. We provide you a bunch of files, but some of them are for reference. You should be mainly be working with changing the following files. Feel free to add helper functions as you see needed.
+        </p>
+        <ul>
+            <li><code>camera.todo.cpp</code>: Can you fill in the getRay function in this file?</li>
+            <li><code>directionalLight.todo.cpp</code>: Can you take what’s filled inside pointLight.todo.cpp as an example, fill in the blanks in this file?</li>
+            <li><code>spotLight.todo.cpp</code>: Can you take what’s filled inside pointLight.todo.cpp as an example, fill in the blanks in this file?</li>
+            <li><code>torus.todo.cpp</code>: Can you take what’s filled inside sphere.todo.cpp as an example, fill in the blanks in this file?</li>
+            <li><code>cone.todo.cpp</code>: Can you take what’s filled inside sphere.todo.cpp as an example, fill in the blanks in this file?</li>
+            <li><code>triangle.todo.cpp</code>: Can you finish the intersect function in this file?</li>
+        </ul>
+    </div>
+
+    
+
+    <div class="section">
+        <h2>5. Expected Submission</h2>
+        <p>When you complete the assignment, your submission should be a zip file containing the following:</p>
+        <ul>
+            <li><strong>Source code</strong>: A folder of all the source code and data you used.</li>
+            <li><strong>All data involved</strong>: Include the example images for unit tests with provided data and any custom data you used for your very own ray tracing process.</li>
+            <li><strong>HTML file with a written summary of what you did and visually showcasing your results</strong>: This should include both the results on the unit test data provided with the assignment and any artistic results you generated on your own data (for an art contest). For this specific assignment, the art contest should have the format of a ray file and a rendered image.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. References</h2>
+        <p>If you need more information about the image ray tracing algorithm, please refer to the lecture slides.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Policy</h2>
+        <p>
+            *You are not allowed to distribute your solution to this homework either online or to other students without permission.
+        </p>
+    </div>
+
+</body>
+</html>
