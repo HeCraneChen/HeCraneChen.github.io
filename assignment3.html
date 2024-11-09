@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Does it tile?</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .policy {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Does it tile?</h1>
+
+    <div class="section">
+        <h2>Release Time and Deadline</h2>
+        <p><strong>Release Time:</strong> November 9, 11:59 PM</p>
+        <p><strong>Theoretical Part Deadline:</strong> November 15, 11:59 PM</p>
+        <p><strong>Coding Part Deadline:</strong> November 27, 11:59 PM</p>
+    </div>
+
+    <div class="section">
+        <h2>1. Starting on the theoretical part (35%)</h2>
+        <p>
+            Classify all the artwork in this link https://mcescher.com/gallery/symmetry/ into 18 baskets. This include 17 symmetry groups, and none of the 17 groups.
+        </p>
+    </p>
+    <h3>Expected submission:</h3>
+    <p>An html report that includes a big table. The table should have 18 rows, two columns. Column 1 says which symmetry group, column2 includes thumbnails of the artwork that got classified in that group.</p>
+    </p>
+    </div>
+
+    <div class="section">
+        <h2>2. Starting on the software part (92% tops)</h2>
+        <p>
+            The goal is to write a graphical user interface that can tile the entire plane with one shape. The size of "the entire plane" is defined by the zooming-in and zooming-out of the mouse.
+        </p>
+        <h3>Step1: Download data</h3>
+        <p>Data is provided in HW3_data.zip file on Canvas. Find the image that pops the most to you, identify it's symmetry group. (Important note: We are not allowed to distribute the data because they are protected with copyright, owned by M.C. Escher Foundation. If you want to post your software, you need to use data created by yourself.)</p>
+        </p>
+        </p>
+        <h3>Step2: Use Adobe Illustrator to trace your favorate data from provided the zip. (5%)</h3>
+        <p>Northeastern provides you access to Creative Cloud. Use your NU email and password to log in.</p>
+        </p>
+        </p>
+        <h3>Step3: Implement the tessellation logic. (15% per symmetry group, 3 tops)</h3>
+        <p>Write the code to tile the entire plane by repeating one piece of your traced tile. Hint: This would be an iterative algorithm that rotate/translate/mirro the basic tile that you traced with Illustrator. If you are doing 3, then you need to trace 3, they need to come from different symmetry groups. Same symmetry group counts as one.</p>
+        </p>
+        </p>
+        <h3>Step4: Tile the sphere (20%)</h3>
+        <p>You will need to grab the tile data by logging data <a href="https://github.com/noamaig/spherical_orbifolds" download>this Matlab code</a> that we ran during the lecture. This would not be one of the 17 symemtry groups of Euclidean plane, but one of the 14 symmetry groups on the sphere.</p>
+        </p>
+        </p>
+        <h3>Step5: Write the graphical user interface. (35%)</h3>
+        <p>Write the visualization logic. Major feature is adding the adaptive the mouse control. When you zoom out, a larger area of the window will be visible, that means you need to run more iterations. Programming language of the GUI can be flexible. It depends on your goals. I recommend C++ with ImGUI (https://github.com/ocornut/imgui). But this doesn't mean Matlab/Python/Javascript/Swift has to be ruled out. It's up to what kind of application you find cool.</p>
+        </p>
+        </p>
+        <h3>Extra Credit: 1 GUI Contest Winner (7%)</h3>
+        <p>This is HW a bit special. We are using the art created by artist. So it's more about the GUI. Kaleido Tile that we played with during the lecture should be considered as role model.</p>
+        </p>
+        <h3>Expected submission:</h3>
+        <ul></ul>
+            <li><strong>Data</strong>: A folder of all the the data you used, this include both the .ai file from Illustrator, and the .png file of the image.</li>
+            <li><strong>Source code</strong>: A folder of all the source code and data you used.</li>
+            <li><strong>All data involved</strong>: Include the example images for unit tests with provided data and any custom data you used for your very own ray tracing process.</li>
+            <li><strong>HTML file with a written summary of what you did and visually showcasing your GUI</strong></li>
+        </ul>
+        <p></p>
+        </p>
+        </p>
+
+    <div class="section">
+        <h2>7. References</h2>
+    </ul>
+    <li>Theory: <a href="https://www.icloud.com/keynote/02ai910ILbBweBTFm10qSy68Q#Week8%5FIntroToTilingTheory" download>Lecture Slides</a></li>
+    <li>Coding: <a href="https://github.com/ocornut/imgui" download>ImGUI</a></li>
+    <li>UI: <a href="https://www.geometrygames.org/KaleidoTile/index.html.en" download>Kaleido Tile</a></li>
+    </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Policy</h2>
+        <p>
+            *You are not allowed to distribute your solution to this homework either online or to other students without permission.
+        </p>
+    </div>
+
+</body>
+</html>
