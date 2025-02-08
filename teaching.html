@@ -32,12 +32,6 @@
           max-width: 30%; /* Ensures the video takes up 30% of the container */
           height: auto;
       }
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 15px;
-            text-align: center;
-        }
         .centered {
             text-align: center;
         }
@@ -111,6 +105,18 @@
       <li>Take more advanced graphics courses (e.g. Computational Geometry, Computer Animation, Geometry Processing, Discrete Differential Geometry, Neural Geometry Processing).</li>
     </ul>
 
+    <h2>Student Results</h2>
+    <video autoplay loop muted playsinline style="height: 200px; width: auto;">
+        <source src="./files/output09.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline style="height: 200px; width: auto;">
+        <source src="./files/ducky.mp4" type="video/mp4">
+    </video>
+    <img src="./files/render1.jpg" style="height: 200px; width: auto;">
+    <img src="./files/render2.bmp" style="height: 200px; width: auto;">
+
+    
+
     <h2>Prerequisites</h2>
     <ul>
       <li>Some knowledge of linear algebra.</li>
@@ -164,312 +170,320 @@
 <video autoplay loop muted playsinline style="width: 30%; height: auto;">
   <source src="./files/58336612022349336143728e1cb433a91ee2bd3000d3b42.mp4" type="video/mp4">
 </video>
-<table style="width: 100%;">
-    <tr>
-        <th style="text-align: left;">Week Num.</th>
-        <th style="text-align: left;">Lecture Slides</th>
-        <th style="text-align: left;">Keywords</th>
-        <th style="text-align: left;">In-Class Coding Practice</th>
-        <th style="text-align: left;">Assigned Reading</th>
-    </tr>
-    <tr>
-        <td style="text-align: left;">Week 0</td>
-        <td style="text-align: left;">
-        <a href="https://www.icloud.com/keynote/037L7eCCg3M3m5-vu0cZ72IWg#Week0%5FIntro" target="_blank">Welcome</a>
-        </td>
-        <td style="text-align: left;">
-        <ul>
-        <li>What is Computer Graphics?</li>
-        </ul></td>
-        <td style="text-align: left;"> <ul><li>N/A</li><ul></td>
-        <td style="text-align: left;">
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=w-cmMcMZoZ4&t=158s" target="_blank">Jensen-Zuck Talk at SIGGRAPH 2024</a></li>
-          <li><a href="https://www.youtube.com/watch?v=MdPXBnJWai8" target="_blank">Turing Award Lecture at SIGGRAPH 2022</a></li>
-        </ul>
-       </td>
-    </tr>
-    <tr>
-      <td style="text-align: left;">Week 1</td>
-      <td style="text-align: left;">
-        <a href="https://www.icloud.com/keynote/0c14A1yklKyEOjkCBfBVAF-XQ#Week1%5FMathPreliminary" target="_blank">Math Preliminary</a>
-        </td>
-      <td style="text-align: left;"><ul>
-        <li>Vector</li>
-        <li>Vector Field, Scalar Field</li>
-        <li>Gradient, Divergence, Curl, Laplacian</li>
-        <li>Solving a Linear System</li>
-        <li>Poisson Surface Reconstruction</li>
-      </ul></td>
-      <td style="text-align: left;">
-        <ul>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice101_visualizing_a_bug.py" target="_blank">Practice 101: Visualize a Bug</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice102_solve_a_sparse_linear_system.py" target="_blank">Practice 102: Solve a Linear System</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice103_visualize_the_gradient.py" target="_blank">Practice 103: Visualize Gradient</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice104_visualize_the_normal_of_a_point_cloud.py" target="_blank">Practice 104: Visualize the Normal of a Point Cloud</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice105_Compute%20and%20visualize_the_normal_of_a_surface_mesh.py" target="_blank">Practice 105: Compute and Visualize the Normal of a Surface Mesh</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice106_laplacian_smoothing_of_a%20_surface_mesh.py" target="_blank">Practice 106: Laplacian Smoothing of a Surface Mesh</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice107_poisson_surface_reconstruction.py" target="_blank">Practice 107: Poisson Surface Reconstruction</a></li>
-        </ul>
-      </td>
-      <td style="text-align: left;"><ul>
-        <li><a href="https://www.cimat.mx/~gil/docencia/2013/topologia_variedades/spivak-calculus-on-manifolds.pdf" target="_blank">Spivak's Calculus on Manifolds</a></li>
-      </ul></td>
-    </tr>
-    <tr>
-        <td style="text-align: left;">Week 2</td>
-        <td style="text-align: left;">
-            <a href="https://www.icloud.com/keynote/0b4llVMWZanFwhl-YfCkGUqlA#Week2%5FSoftwareTools%5FPart1" target="_blank">Software Tools</a>
-        </td>
-        <td style="text-align: left;"><ul>
-        <li>CMake</li>
-        <li>Modern C++</li>
-        <li>C++ in The Wild for Computer Graphics</li>
-      </ul></td>
-        <td style="text-align: left;">
-          <ul>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/tree/main/practice201_hello_cpp" target="_blank">Practice 201: Hello C++</a></li>
-          <li><a href="https://github.com/HeCraneChen/total-curvature-estimation" target="_blank">Practice 202: Total Curvature Calculator</a></li>
-          <li><a href="https://github.com/HTDerekLiu/CubicStylization_Cpp" target="_blank">Practice 203: Cubic Stylization</a></li>
-          <li><a href="https://github.com/sgsellan/swept-volumes" target="_blank">Practice 204: Swept Volumes</a></li>
-          </ul>
-        </td>
-        <td style="text-align: left;">
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Week Num.</th>
+            <th>Lecture Slides</th>
+            <th>Keywords</th>
+            <th>In-Class Coding Practice</th>
+            <th>Assigned Reading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: left;">Week 0</td>
+            <td style="text-align: left;">
+            <a href="https://www.icloud.com/keynote/037L7eCCg3M3m5-vu0cZ72IWg#Week0%5FIntro" target="_blank">Welcome</a>
+            </td>
+            <td style="text-align: left;">
             <ul>
-            <li><a href="https://en.cppreference.com/w/" target="_blank">CPP Reference</a></li>
-            <li><a href="https://crascit.com/professional-cmake/" target="_blank">Professional CMake: A Practical Guide</a></li>
+            <li>What is Computer Graphics?</li>
+            </ul></td>
+            <td style="text-align: left;"> <ul><li>N/A</li><ul></td>
+            <td style="text-align: left;">
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=w-cmMcMZoZ4&t=158s" target="_blank">Jensen-Zuck Talk at SIGGRAPH 2024</a></li>
+              <li><a href="https://www.youtube.com/watch?v=MdPXBnJWai8" target="_blank">Turing Award Lecture at SIGGRAPH 2022</a></li>
             </ul>
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align: left;">Week 3</td>
-        <td style="text-align: left;"> <a href="https://www.icloud.com/keynote/07efE3VV489D8gS0b3ZkLK40Q#Week3%5FMorfing" target="_blank">Morfing</a></td> 
-  
-        <td style="text-align: left;">
-        <ul>
-        <li>Image Acquisition Methods</li>
-        <li>What is Diffusion?</li>
-        <li>Representations of Digital Images</li>
-        <li>Digital Half Toning</li>
-        <li>Beier-Neeley Morfing</li>
-        </ul>
-        </td>
-        <td style="text-align: left;"><ul>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice301_half_toning.py" target="_blank">Practice 301: Digital Half Toning</a></li>
-          <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice302_vertical_edge_filter.py" target="_blank">Practice 302: Edge Detector</a></li>
+           </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Week 1</td>
+            <td style="text-align: left;">
+              <a href="https://www.icloud.com/keynote/0c14A1yklKyEOjkCBfBVAF-XQ#Week1%5FMathPreliminary" target="_blank">Math Preliminary</a>
+              </td>
+            <td style="text-align: left;"><ul>
+              <li>Vector</li>
+              <li>Vector Field, Scalar Field</li>
+              <li>Gradient, Divergence, Curl, Laplacian</li>
+              <li>Solving a Linear System</li>
+              <li>Poisson Surface Reconstruction</li>
+            </ul></td>
+            <td style="text-align: left;">
+              <ul>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice101_visualizing_a_bug.py" target="_blank">Practice 101: Visualize a Bug</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice102_solve_a_sparse_linear_system.py" target="_blank">Practice 102: Solve a Linear System</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice103_visualize_the_gradient.py" target="_blank">Practice 103: Visualize Gradient</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice104_visualize_the_normal_of_a_point_cloud.py" target="_blank">Practice 104: Visualize the Normal of a Point Cloud</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice105_Compute%20and%20visualize_the_normal_of_a_surface_mesh.py" target="_blank">Practice 105: Compute and Visualize the Normal of a Surface Mesh</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice106_laplacian_smoothing_of_a%20_surface_mesh.py" target="_blank">Practice 106: Laplacian Smoothing of a Surface Mesh</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice107_poisson_surface_reconstruction.py" target="_blank">Practice 107: Poisson Surface Reconstruction</a></li>
+              </ul>
+            </td>
+            <td style="text-align: left;"><ul>
+              <li><a href="https://www.cimat.mx/~gil/docencia/2013/topologia_variedades/spivak-calculus-on-manifolds.pdf" target="_blank">Spivak's Calculus on Manifolds</a></li>
+            </ul></td>
+          </tr>
+
+          <tr>
+            <td style="text-align: left;">Week 2</td>
+            <td style="text-align: left;">
+                <a href="https://www.icloud.com/keynote/0b4llVMWZanFwhl-YfCkGUqlA#Week2%5FSoftwareTools%5FPart1" target="_blank">Software Tools</a>
+            </td>
+            <td style="text-align: left;"><ul>
+            <li>CMake</li>
+            <li>Modern C++</li>
+            <li>C++ in The Wild for Computer Graphics</li>
           </ul></td>
-        <td style="text-align: left;">
+            <td style="text-align: left;">
+              <ul>
+              <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/tree/main/practice201_hello_cpp" target="_blank">Practice 201: Hello C++</a></li>
+              <li><a href="https://github.com/HeCraneChen/total-curvature-estimation" target="_blank">Practice 202: Total Curvature Calculator</a></li>
+              <li><a href="https://github.com/HTDerekLiu/CubicStylization_Cpp" target="_blank">Practice 203: Cubic Stylization</a></li>
+              <li><a href="https://github.com/sgsellan/swept-volumes" target="_blank">Practice 204: Swept Volumes</a></li>
+              </ul>
+            </td>
+            <td style="text-align: left;">
+                <ul>
+                <li><a href="https://en.cppreference.com/w/" target="_blank">CPP Reference</a></li>
+                <li><a href="https://crascit.com/professional-cmake/" target="_blank">Professional CMake: A Practical Guide</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Week 3</td>
+            <td style="text-align: left;"> <a href="https://www.icloud.com/keynote/07efE3VV489D8gS0b3ZkLK40Q#Week3%5FMorfing" target="_blank">Morfing</a></td> 
+      
+            <td style="text-align: left;">
             <ul>
-            <li><a href="./files/beier92.pdf" target="_blank">Feature-Based Image Metamorphosis (SIGGRAPH '92)</a></li>
+            <li>Image Acquisition Methods</li>
+            <li>What is Diffusion?</li>
+            <li>Representations of Digital Images</li>
+            <li>Digital Half Toning</li>
+            <li>Beier-Neeley Morfing</li>
             </ul>
-        </td>
-    </tr>
-    <tr>
-        <td style="text-align: left;">Week 4</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/02edLuLYSkDfz1rmaZKoeLFMQ#Week4%5FSpatialTransformations" target="_blank">Spatial Transformations</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;">
-        <ul>
-        <li>Transformation Matrices</li>
-        <li>Homogeneous Coordinates</li>
-        <li>Interpolating Transformations</li>
-        <li>SLERP</li>
-        <li>Linear Blend Skinning</li>
-        </ul>        
-        </td>
-        <td style="text-align: left;">
-          <ul>
-            <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice401_visualizing_3d_rotation.py" target="_blank">Practice 401: Visualize 3D Rotation</a></li>
-            <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice402_visualizing_3d_translation.py" target="_blank">Practice 402: Visualize 3D Translation</a></li>
-            <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice403_visualizing_3d_scale.py" target="_blank">Practice 403: Visualize 3D Scaling</a></li>
-            <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice404_visualizing_3d_shear.py" target="_blank">Practice 404: Visualize 3D Shearing</a></li>
-            <li><a href="https://github.com/libigl/libigl/tree/main/tutorial/403_BoundedBiharmonicWeights" target="_blank">Practice 405: Linear Blend Skinning</a></li>
-           </ul>
-        </td>
-        <td style="text-align: left;">
-          <ul>
-            <li><a href="./files/p245-shoemake.pdf" target="_blank">Animating Rotation with Quaternion Curves (SIGGRAPH '85)</a></li>
-            <li><a href="./files/A Mathematical Introduction to Robotic Manipulation.pdf" target="_blank">A Mathematical Introduction to Robotic Manipulation</a></li>
-          </ul>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align: left;">Week 5,6</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/058DtH5Twl_eVmhqT7BnOx7mA#Week5%2C6%5FRendering" target="_blank">Rendering Equation</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>Direct Illumination</li>
-        <li>Indirect Illumination</li>
-        </ul></td>
-        <td style="text-align: left;">
-          <ul>
-            <li><a href="https://mitsuba.readthedocs.io/en/latest/src/inverse_rendering/projective_sampling_integrators.html" target="_blank">Practice 501: Shadow Art</a></li>
-            <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice601_render_your_donut.py" target="_blank">Practice 601: Render Your First Donut</a></li>
-            <li><a href="https://www.shadertoy.com/view/3lsSzf" target="_blank">Practice 602: Shader Toy</a></li>
-           </ul>
-        </td>
-        <td style="text-align: left;">
-          <ul>
-            <li><a href="https://www.shadertoy.com/new" target="_blank">Shader Toy</a></li>
-          </ul>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align: left;">Week 7</td>
-      <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0f5ZQMqojS1Yjp8s1aU_GfWsg#Week7%5FTextureMapping" target="_blank">Texture Mapping</a></td>       -->
-      <td style="text-align: left;"><ul>
-        <!-- <li>N/A</li> -->
-         </ul></td>
-      <td style="text-align: left;"><ul>
-        <li>Quotient</li>
-        <li>Orbifold</li>
-        <li>Cone Points</li>
-        <li>Embedding</li>
-        <li>Tutte Embedding</li>
-        <li>Surface Parametrization</li>
-        <li>Criterions of Good Surface Parametrization</li>
-        </ul></td>
-      <td style="text-align: left;">
-        <li><a href="https://github.com/noamaig/euclidean_orbifolds" target="_blank">Practice 701: Orbifold Tutte Embeddings</a></li>
-        <li><a href="https://github.com/noamaig/hyperbolic_orbifolds" target="_blank">Practice 702: Hyperbolic Orbifold Tutte Embeddings</a></li>
-        <li><a href="https://github.com/noamaig/spherical_orbifolds" target="_blank">Practice 703: Spherical Orbifold Tutte Embeddings</a></li>
-      </td>
-      <td style="text-align: left;"><ul>
-        <li><a href="https://noamaig.github.io/html/projects/orbifold/orbifold_highres.pdf" target="_blank">Orbifold Tutte Embeddings (SIGGRAPH Asia 2015)</a></li>
-        <li><a href="https://noamaig.github.io/html/projects/hyperbolic/hyperbolic.pdf" target="_blank">Hyperbolic Orbifold Tutte Embeddings (SIGGRAPH Asia 2016)</a></li>
-        <li><a href="https://noamaig.github.io/html/projects/spherical/highres.pdf" target="_blank">Spherical Orbifold Tutte Embeddings (SIGGRAPH 2017)</a></li>
-      </ul></td>
-    </tr>
-    <tr>
-      <td style="text-align: left;">Week 8</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/02ai910ILbBweBTFm10qSy68Q#Week8%5FIntroToTilingTheory" target="_blank">Intro To Tiling Theory</a></td>  -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>Growth Rules of Plant-like Curves</li>
-        <li>SDS Loss</li>
-        <li>Symmetry Groups</li>
-        </ul></td>
-      <td style="text-align: left;"><ul>
-        <li><a href="https://www.geometrygames.org/KaleidoTile/index.html.en" target="_blank">Practice 801: Kaleido Tile</a></li>
-      </ul></td>
-      <td style="text-align: left;"><ul>
-        <li><a href="https://imagine.enpc.fr/~groueixt/escher/" target="_blank">Generative Escher Meshes (SIGGRAPH 2024)</a></li>
-        <li><a href="https://dl.acm.org/doi/pdf/10.1145/280814.280948" target="_blank">Computer-Generated Floral Ornament(SIGGRAPH 1998)</a></li>
-        <li><a href="https://www.amazon.com/Symmetries-Things-John-H-Conway/dp/1568812205" target="_blank">The Symmetries of Things (Chapters1,2,3,4)</a></li>
-      </ul></td>
-    </tr>
-    <tr>
-        <td style="text-align: left;">Week 9</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0f8C_FFcBuqVYv6MzssLRK5IA#Week9%5FIntroToDiscreteGeometry%5FFundamentals" target="_blank">Intro To Discrete Geometry (Fundamentals)</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>What is a Mesh?</li>
-        <li>Data Structure of Meshes</li>
-        <li>Pipeline and Tasks of Digital Geometry Processing</li>
-        <li>Delaunay Triangulation</li>
-        <li>Curvature</li>
-        </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://www.meshlab.net/" target="_blank">Practice 901: Filters of Meshlab</a></li>
-        <li><a href="https://github.com/CGAL/cgal-swig-bindings/blob/main/examples/python/polygonal_triangulation.py" target="_blank">Practice 902: Constrained Delaunay Triangulation</a></li>
-      </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://dl.acm.org/doi/abs/10.1145/3587421.3595439" target="_blank">Estimating Discrete Total Curvature with Per Triangle Normal Variation
- (SIGGRAPH 2023)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=0av77zpBeH8&t=705s" target="_blank">Curvature Talk by Chaim Goodman-Strauss at MoMath</a></li>
-      </ul></td>
-    </tr>
-        <td style="text-align: left;">Week 10</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/06d8I5Sz_wj4vtDgHNSQK7PYQ#Week10%5FIntroToGeometryApplications" target="_blank">Intro To Discrete Geometry (Applications)</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>What is Mesh Deformation?</li>
-        <li>Cage-based Deformation</li>
-        <li>Intuition of the Three Terms in Elastic Potential Energy</li>
-        <li>What is Kelvinlets?</li>
-        <li>Strengths of Kelvinlets</li>
-        </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/405_AsRigidAsPossible/main.cpp" target="_blank">Practice 1001: As Rigid As Possible</a></li>
-        <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/407_BiharmonicCoordinates/main.cpp" target="_blank">Practice 1002: Biharmonic Coordinates Deformation</a></li>
-        <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/408_DirectDeltaMush/main.cpp" target="_blank">Practice 1003: Direct Delta Mush</a></li>
-        <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/409_Kelvinletss/main.cpp" target="_blank">Practice 1004: Regularized Kelvinlets</a></li>
-        <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Practice 1005: Dynamic Kelvinlets</a></li>
-      </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://graphics.pixar.com/library/Kelvinlets/" target="_blank">Regularized Kelvinlets (SIGGRAPH 2017)</a></li>
-      </ul></td>
-    </tr>
-        <td style="text-align: left;">Week 11</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/047xcA2K7Ih6wRb-BuzliAUOQ#Week11%5FIntroToAnimation" target="_blank">Intro To Computer Animation</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>What is Dynamic Kelvinlets?</li>
-        <li>Elastic Wave Equation</li>
-        <li>Helmholtz Decomposition</li>
-        </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Practice 1101: Using Dynamic Kelvinlets in Houdini</a></li>
-      </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Dynamic Kelvinlets (SIGGRAPH 2018)</a></li>
-        <li><a href="https://graphics.pixar.com/library/SharpKelvinlets/paper.pdf" target="_blank">Sharp Kelvinlets (DigiPro 2019)</a></li>
-        <li><a href="https://www.tkim.graphics/DYNAMIC_DEFORMABLES/" target="_blank">Dynamic Deformables (SIGGRAPH Course 2020, 2022)</a></li>
-      </ul></td>
-    </tr>
-        <td style="text-align: left;">Week 12</td>
-        <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0a8KB47IK5HJjOUThDcF1OOcw#Week12%5FIntroToNeuralGeometryAndSimulation" target="_blank">(Neural) Fluid Simulation</a></td> -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>Intuition of Navier-Stokes Equations</li>
-        <li>Lagrangian Method</li>
-        <li>Eulerian Method</li>
-        <li>Neural Style Transfer of Volumes</li>
-        </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>N/A</li>
-      </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="https://studios.disneyresearch.com/2022/11/30/efficient-neural-style-transfer-for-volumetric-simulations/" target="_blank">Efficient Neural Style Transfer For Volumetric Simulations (SIGGRAPH Asia 2022)</a></li>
-        <li><a href="https://www.cs.ubc.ca/~rbridson/fluidsimulation/fluids_notes.pdf" target="_blank">Fluid Simulation (SIGGRAPH Course 2007)</a></li>
-        </ul></td>
-    </tr>
-       <td style="text-align: left;">Week 13</td>
-        <!-- <td style="text-align: left;"><a href=" https://www.icloud.com/keynote/012D8y7ygcO2z_ahNvzDb_MGw#Week13%5FPDEStrikesBack target="_blank">PDE Strikes Back</a></td>                     -->
-        <td style="text-align: left;"><ul>
-          <!-- <li>N/A</li> -->
-           </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>Standard Form of Optimization</li>
-        <li>Feasibility of Optimization</li>
-        <li>PDE VS. ODE</li>
-        <li>Intuition of Laplace Equation, Heat Equation, Wave Equation</li>
-        <li>Numerical Solve of Laplace Equation</li>
-        <li>Prescribing Boundary Conditions</li>
-        </ul></td>
-        <td style="text-align: left;"><ul>
-        <li>N/A</li>
-         </ul></td>
-        <td style="text-align: left;"><ul>
-        <li><a href="./files/PDEbook.pdf" target="_blank">Zachmanoglou's Intro To Partial Differential Equations with Applications</a></li>
-        <li><a href="https://www.youtube.com/watch?v=K34uoFQ5Inc&list=PLGisQzSqdJh8OWzDoKI9bf0ZkGjVLN5BU" target="_blank">Numerical Methods for PDEs</a></li>
-        </ul></td>
-    </tr>
-</table>
+            </td>
+            <td style="text-align: left;"><ul>
+              <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice301_half_toning.py" target="_blank">Practice 301: Digital Half Toning</a></li>
+              <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice302_vertical_edge_filter.py" target="_blank">Practice 302: Edge Detector</a></li>
+              </ul></td>
+            <td style="text-align: left;">
+                <ul>
+                <li><a href="./files/beier92.pdf" target="_blank">Feature-Based Image Metamorphosis (SIGGRAPH '92)</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Week 4</td>
+            <td style="text-align: left;"><a href="https://www.icloud.com/keynote/02edLuLYSkDfz1rmaZKoeLFMQ#Week4%5FSpatialTransformations" target="_blank">Spatial Transformations</a></td>
+            <!-- <td style="text-align: left;"><ul> -->
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;">
+            <ul>
+            <li>Transformation Matrices</li>
+            <li>Homogeneous Coordinates</li>
+            <li>Interpolating Transformations</li>
+            <li>SLERP</li>
+            <li>Linear Blend Skinning</li>
+            </ul>        
+            </td>
+            <td style="text-align: left;">
+              <ul>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice401_visualizing_3d_rotation.py" target="_blank">Practice 401: Visualize 3D Rotation</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice402_visualizing_3d_translation.py" target="_blank">Practice 402: Visualize 3D Translation</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice403_visualizing_3d_scale.py" target="_blank">Practice 403: Visualize 3D Scaling</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice404_visualizing_3d_shear.py" target="_blank">Practice 404: Visualize 3D Shearing</a></li>
+                <li><a href="https://github.com/libigl/libigl/tree/main/tutorial/403_BoundedBiharmonicWeights" target="_blank">Practice 405: Linear Blend Skinning</a></li>
+               </ul>
+            </td>
+            <td style="text-align: left;">
+              <ul>
+                <li><a href="./files/p245-shoemake.pdf" target="_blank">Animating Rotation with Quaternion Curves (SIGGRAPH '85)</a></li>
+                <li><a href="./files/A Mathematical Introduction to Robotic Manipulation.pdf" target="_blank">A Mathematical Introduction to Robotic Manipulation</a></li>
+              </ul>
+            </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">Week 5,6</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/058DtH5Twl_eVmhqT7BnOx7mA#Week5%2C6%5FRendering" target="_blank">Rendering Equation</a></td> -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>Direct Illumination</li>
+            <li>Indirect Illumination</li>
+            </ul></td>
+            <td style="text-align: left;">
+              <ul>
+                <li><a href="https://mitsuba.readthedocs.io/en/latest/src/inverse_rendering/projective_sampling_integrators.html" target="_blank">Practice 501: Shadow Art</a></li>
+                <li><a href="https://github.com/HeCraneChen/computer_graphics_coding_practice/blob/main/practice601_render_your_donut.py" target="_blank">Practice 601: Render Your First Donut</a></li>
+                <li><a href="https://www.shadertoy.com/view/3lsSzf" target="_blank">Practice 602: Shader Toy</a></li>
+               </ul>
+            </td>
+            <td style="text-align: left;">
+              <ul>
+                <li><a href="https://www.shadertoy.com/new" target="_blank">Shader Toy</a></li>
+              </ul>
+            </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">Week 7</td>
+          <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0f5ZQMqojS1Yjp8s1aU_GfWsg#Week7%5FTextureMapping" target="_blank">Texture Mapping</a></td>       -->
+          <td style="text-align: left;"><ul>
+            <!-- <li>N/A</li> -->
+             </ul></td>
+          <td style="text-align: left;"><ul>
+            <li>Quotient</li>
+            <li>Orbifold</li>
+            <li>Cone Points</li>
+            <li>Embedding</li>
+            <li>Tutte Embedding</li>
+            <li>Surface Parametrization</li>
+            <li>Criterions of Good Surface Parametrization</li>
+            </ul></td>
+          <td style="text-align: left;">
+            <li><a href="https://github.com/noamaig/euclidean_orbifolds" target="_blank">Practice 701: Orbifold Tutte Embeddings</a></li>
+            <li><a href="https://github.com/noamaig/hyperbolic_orbifolds" target="_blank">Practice 702: Hyperbolic Orbifold Tutte Embeddings</a></li>
+            <li><a href="https://github.com/noamaig/spherical_orbifolds" target="_blank">Practice 703: Spherical Orbifold Tutte Embeddings</a></li>
+          </td>
+          <td style="text-align: left;"><ul>
+            <li><a href="https://noamaig.github.io/html/projects/orbifold/orbifold_highres.pdf" target="_blank">Orbifold Tutte Embeddings (SIGGRAPH Asia 2015)</a></li>
+            <li><a href="https://noamaig.github.io/html/projects/hyperbolic/hyperbolic.pdf" target="_blank">Hyperbolic Orbifold Tutte Embeddings (SIGGRAPH Asia 2016)</a></li>
+            <li><a href="https://noamaig.github.io/html/projects/spherical/highres.pdf" target="_blank">Spherical Orbifold Tutte Embeddings (SIGGRAPH 2017)</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">Week 8</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/02ai910ILbBweBTFm10qSy68Q#Week8%5FIntroToTilingTheory" target="_blank">Intro To Tiling Theory</a></td>  -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>Growth Rules of Plant-like Curves</li>
+            <li>SDS Loss</li>
+            <li>Symmetry Groups</li>
+            </ul></td>
+          <td style="text-align: left;"><ul>
+            <li><a href="https://www.geometrygames.org/KaleidoTile/index.html.en" target="_blank">Practice 801: Kaleido Tile</a></li>
+          </ul></td>
+          <td style="text-align: left;"><ul>
+            <li><a href="https://imagine.enpc.fr/~groueixt/escher/" target="_blank">Generative Escher Meshes (SIGGRAPH 2024)</a></li>
+            <li><a href="https://dl.acm.org/doi/pdf/10.1145/280814.280948" target="_blank">Computer-Generated Floral Ornament(SIGGRAPH 1998)</a></li>
+            <li><a href="https://www.amazon.com/Symmetries-Things-John-H-Conway/dp/1568812205" target="_blank">The Symmetries of Things (Chapters1,2,3,4)</a></li>
+          </ul></td>
+        </tr>
+        <tr>
+            <td style="text-align: left;">Week 9</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0f8C_FFcBuqVYv6MzssLRK5IA#Week9%5FIntroToDiscreteGeometry%5FFundamentals" target="_blank">Intro To Discrete Geometry (Fundamentals)</a></td> -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>What is a Mesh?</li>
+            <li>Data Structure of Meshes</li>
+            <li>Pipeline and Tasks of Digital Geometry Processing</li>
+            <li>Delaunay Triangulation</li>
+            <li>Curvature</li>
+            </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://www.meshlab.net/" target="_blank">Practice 901: Filters of Meshlab</a></li>
+            <li><a href="https://github.com/CGAL/cgal-swig-bindings/blob/main/examples/python/polygonal_triangulation.py" target="_blank">Practice 902: Constrained Delaunay Triangulation</a></li>
+          </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3587421.3595439" target="_blank">Estimating Discrete Total Curvature with Per Triangle Normal Variation
+     (SIGGRAPH 2023)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=0av77zpBeH8&t=705s" target="_blank">Curvature Talk by Chaim Goodman-Strauss at MoMath</a></li>
+          </ul></td>
+        </tr>
+            <td style="text-align: left;">Week 10</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/06d8I5Sz_wj4vtDgHNSQK7PYQ#Week10%5FIntroToGeometryApplications" target="_blank">Intro To Discrete Geometry (Applications)</a></td> -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>What is Mesh Deformation?</li>
+            <li>Cage-based Deformation</li>
+            <li>Intuition of the Three Terms in Elastic Potential Energy</li>
+            <li>What is Kelvinlets?</li>
+            <li>Strengths of Kelvinlets</li>
+            </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/405_AsRigidAsPossible/main.cpp" target="_blank">Practice 1001: As Rigid As Possible</a></li>
+            <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/407_BiharmonicCoordinates/main.cpp" target="_blank">Practice 1002: Biharmonic Coordinates Deformation</a></li>
+            <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/408_DirectDeltaMush/main.cpp" target="_blank">Practice 1003: Direct Delta Mush</a></li>
+            <li><a href="https://github.com/libigl/libigl/blob/main/tutorial/409_Kelvinletss/main.cpp" target="_blank">Practice 1004: Regularized Kelvinlets</a></li>
+            <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Practice 1005: Dynamic Kelvinlets</a></li>
+          </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://graphics.pixar.com/library/Kelvinlets/" target="_blank">Regularized Kelvinlets (SIGGRAPH 2017)</a></li>
+          </ul></td>
+        </tr>
+            <td style="text-align: left;">Week 11</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/047xcA2K7Ih6wRb-BuzliAUOQ#Week11%5FIntroToAnimation" target="_blank">Intro To Computer Animation</a></td> -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>What is Dynamic Kelvinlets?</li>
+            <li>Elastic Wave Equation</li>
+            <li>Helmholtz Decomposition</li>
+            </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Practice 1101: Using Dynamic Kelvinlets in Houdini</a></li>
+          </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://graphics.pixar.com/library/DynaKelvinlets/" target="_blank">Dynamic Kelvinlets (SIGGRAPH 2018)</a></li>
+            <li><a href="https://graphics.pixar.com/library/SharpKelvinlets/paper.pdf" target="_blank">Sharp Kelvinlets (DigiPro 2019)</a></li>
+            <li><a href="https://www.tkim.graphics/DYNAMIC_DEFORMABLES/" target="_blank">Dynamic Deformables (SIGGRAPH Course 2020, 2022)</a></li>
+          </ul></td>
+        </tr>
+            <td style="text-align: left;">Week 12</td>
+            <!-- <td style="text-align: left;"><a href="https://www.icloud.com/keynote/0a8KB47IK5HJjOUThDcF1OOcw#Week12%5FIntroToNeuralGeometryAndSimulation" target="_blank">(Neural) Fluid Simulation</a></td> -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>Intuition of Navier-Stokes Equations</li>
+            <li>Lagrangian Method</li>
+            <li>Eulerian Method</li>
+            <li>Neural Style Transfer of Volumes</li>
+            </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>N/A</li>
+          </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="https://studios.disneyresearch.com/2022/11/30/efficient-neural-style-transfer-for-volumetric-simulations/" target="_blank">Efficient Neural Style Transfer For Volumetric Simulations (SIGGRAPH Asia 2022)</a></li>
+            <li><a href="https://www.cs.ubc.ca/~rbridson/fluidsimulation/fluids_notes.pdf" target="_blank">Fluid Simulation (SIGGRAPH Course 2007)</a></li>
+            </ul></td>
+        </tr>
+           <td style="text-align: left;">Week 13</td>
+            <!-- <td style="text-align: left;"><a href=" https://www.icloud.com/keynote/012D8y7ygcO2z_ahNvzDb_MGw#Week13%5FPDEStrikesBack target="_blank">PDE Strikes Back</a></td>                     -->
+            <td style="text-align: left;"><ul>
+              <!-- <li>N/A</li> -->
+               </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>Standard Form of Optimization</li>
+            <li>Feasibility of Optimization</li>
+            <li>PDE VS. ODE</li>
+            <li>Intuition of Laplace Equation, Heat Equation, Wave Equation</li>
+            <li>Numerical Solve of Laplace Equation</li>
+            <li>Prescribing Boundary Conditions</li>
+            </ul></td>
+            <td style="text-align: left;"><ul>
+            <li>N/A</li>
+             </ul></td>
+            <td style="text-align: left;"><ul>
+            <li><a href="./files/PDEbook.pdf" target="_blank">Zachmanoglou's Intro To Partial Differential Equations with Applications</a></li>
+            <li><a href="https://www.youtube.com/watch?v=K34uoFQ5Inc&list=PLGisQzSqdJh8OWzDoKI9bf0ZkGjVLN5BU" target="_blank">Numerical Methods for PDEs</a></li>
+            </ul></td>
+        </tr>
+    </table>
+
+
+
 
 <h2>Reference</h2>
 I did not grow the knowledge out of the ground. The knowledge did not fall out of the sky either. My own insights were injected, but I have also put existing things together for a lot of parts. In alphabetical order, I have stolen contents from:
