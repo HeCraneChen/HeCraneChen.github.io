@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deform Escher tiles without introducing gaps or overlaps.">
+  <meta name="keywords" content="Mathematics, Fine Arts, Illusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escher Tile Deformation via Closed-Form Solution</title>
+
+  <!-- ✅ Random Favicon Injection BEFORE browser prefetch -->
+  <script>
+    (function() {
+      const icons = [
+        "./static/images/icon1.png",
+        "./static/images/icon2.png",
+        "./static/images/icon3.png"
+      ];
+      const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+      const hrefWithCache = randomIcon + "?t=" + Date.now();
+
+      // Remove any existing favicons (just in case)
+      document.querySelectorAll('link[rel="icon"], link[rel="shortcut icon"]').forEach(el => el.remove());
+
+      // Create a fresh favicon
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/svg+xml";
+      link.href = hrefWithCache;
+
+      // Inject immediately so browser picks it up before /favicon.ico
+      document.head.appendChild(link);
+    })();
+  </script>
+
+  <!-- ✅ No static <link rel="icon"> below! -->
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- JS Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://imagine.enpc.fr/~groueixt/escher/">Generative Escher Meshes</a>
+          <a class="navbar-item" href="https://dl.acm.org/doi/pdf/10.1145/344779.345022">Escherization</a>
+          <a class="navbar-item" href="https://www.tkim.graphics/PORTALS/SchorKim2024.pdf">Directable Fractal Self-similarity</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Escher Tile Deformation via Closed-Form Solution</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://cranehechen.com/">Crane He Chen</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="http://www.vovakim.com/">Vladimir G. Kim</a><sup>2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Industrial Light & Magic, Lucasfilm</span>
+            <span class="author-block"><sup>2</sup>Adobe Research</span>
+          </div>
+
+          <div class="is-size-5 has-text-centered" style="margin-top: 0.5rem;">
+            <strong>SIGGRAPH 2025</strong>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2506.23388" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Code Coming Soon -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-light" style="pointer-events:none;opacity:1.0;">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" style="display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;">
+      <video id="teaser1" autoplay muted loop playsinline style="width:100%;height:auto;">
+        <source src="./static/videos/demo_monster.mp4" type="video/mp4">
+      </video>
+      <video id="teaser2" autoplay muted loop playsinline style="width:100%;height:auto;">
+        <source src="./static/videos/demo_devil.mp4" type="video/mp4">
+      </video>
+    </div>
+    <h2 class="subtitle has-text-centered" style="margin-top:1rem;">
+      Our method interactively deforms Escher tiles without introducing gaps or overlaps.
+    </h2>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a real-time deformation method for Escher tiles—interlocking organic forms that seamlessly tessellate the plane following symmetry rules. We formulate the problem as determining a periodic displacement field and solve it analytically in closed form. Our method supports all 17 wallpaper groups and deforms both the boundary and interior of textured tiles. An adaptive fall-off parameter allows artists to control the locality and semantic intent of deformations in real-time. Applications include interactive photo editing, mesh sculpting, and pattern design for fabrication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Videos Side by Side -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Videos</h2>
+    
+    <div class="columns is-centered">
+      <!-- Supplemental Video -->
+      <!-- <div class="column is-half has-text-centered">
+        <h3 class="title is-4">Supplemental Video</h3>
+        <div class="publication-video">
+          <iframe width="100%" height="315"
+                  src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div> -->
+
+      <div class="column is-half has-text-centered">
+        <h3 class="title is-4">Supplemental Video</h3>
+        <div class="publication-video">
+          <iframe width="100%" height="315"
+                  src="https://www.youtube.com/embed/FNbwXJdGOD8?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      
+
+      <!-- https://youtu.be/FNbwXJdGOD8 -->
+
+  
+
+      <!-- Fast Forward Video -->
+      <div class="column is-half has-text-centered">
+        <h3 class="title is-4">Technical Paper Fast Forward</h3>
+        <div class="publication-video">
+          <iframe width="100%" height="315"
+                  src="https://www.youtube.com/embed/SXgdG1Hf7bE?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      
+
+      <!-- https://youtu.be/SXgdG1Hf7bE -->
+
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-shiba">
+          <img src="./static/images/1.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-fullbody">
+          <img src="./static/images/2.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-blueshirt">
+          <img src="./static/images/3.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-mask">
+          <img src="./static/images/4.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-coffee">
+          <img src="./static/images/5.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-coffee">
+          <img src="./static/images/6.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-coffee">
+          <img src="./static/images/7.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+        <div class="item item-coffee">
+          <img src="./static/images/8.png" 
+              alt="Dress animation" 
+              style="max-width:100%; height:auto;">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Escher Tiles: Symmetry, Art, and Wallpaper Groups</h2>
+        <div class="content has-text-justified">
+          <p>
+            <a href="https://www.youtube.com/watch?v=2PCiJ9SLwao" target="_blank">Symmetry</a> is inherently appealing to the human visual system. The Dutch artist 
+            <a href="https://mcescher.com/gallery/symmetry/" target="_blank">M.C. Escher</a> was known for creating intricate symmetric patterns with interlocking animal shapes. 
+            <a href="https://en.wikipedia.org/wiki/Wallpaper_group" target="_blank">Wallpaper groups</a> provide a mathematical framework for categorizing all symmetry types on the Euclidean plane—remarkably, just 17 distinct groups cover every possibility.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <video src="./static/videos/escher_tiles.mp4" autoplay loop muted playsinline style="max-width:100%;height:auto;">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">The Closed-form Solutions</h2>
+        <div class="columns is-centered">
+          <div class="column content has-text-centered">
+            <img src="./static/images/closed_form_solutions.png" alt="Closed-form Solution Result" style="max-width:100%;height:auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Interesting Unsolved Problems?</h2>
+        <p>
+          A thorough theory and the corresponding software for symmetry downgrading using the concept of group and subgroup is yet to be proven and created. We only have two examples for now. In the first example, a ∗442 pattern is transformed into a 4 ∗ 2 pattern, representing a reduction in symmetry as 4 ∗ 2 is a subgroup of 442. In the second example, a 4 ∗ 2 pattern is further deformed into a *2222 pattern, reflecting another symmetry downgrade.
+        </p>
+      
+        <div class="columns is-centered">
+          <div class="column content has-text-centered">
+            <img src="./static/images/symmetry_downgrading.png" alt="Closed-form Solution Result" style="max-width:100%;height:auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Acknowledgments -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">Acknowledgments</h2>
+    <div class="content has-text-justified">
+      <p>
+        We are grateful to 
+        <a href="https://noamaig.github.io/" target="_blank">Noam Aigerman</a> and 
+        <a href="https://imagine.enpc.fr/~groueixt/" target="_blank">Thibault Groueix</a> 
+        for their insightful discussions during the early stages of this project. 
+        We thank Abhijeet Chowdhury and Taiwei Cui for their help in improving the GUI. 
+        We also appreciate 
+        <a href="https://www.danbgoldman.com/home/" target="_blank">Dan B Goldman</a>, 
+        <a href="https://cs.stanford.edu/~asuter/" target="_blank">Alex Suter</a> for feedback on the manuscript; 
+        <a href="https://www.imdb.com/name/nm0223759/" target="_blank">Michael DiComo</a> for DCC integration feedback; 
+        <a href="https://rubenwiersma.nl/" target="_blank">Ruben Wiersma</a> for proofreading and M.C. Escher Company communications; 
+        <a href="https://www.siggraph.org/inside-siggraph/member-profiles/profile/?member=stephen-n-spencer" target="_blank">Stephen N. Spencer</a> for ACM proceedings guidance; 
+        and <a href="http://fernandodegoes.org/" target="_blank">Fernando de Goes</a> for discussions on divergence-free displacement fields.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{Chen25,
+  title = {Escher Tile Deformation via Closed-Form Solution},
+  author = {Crane He Chen and Vladimir G. Kim},
+  year = {2025},
+  journal = {SIGGRAPH}}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for the template of this website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
