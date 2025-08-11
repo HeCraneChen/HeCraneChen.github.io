@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <style>
+  .link-block a {
+    flex: 0 0 auto; /* prevents stretching */
+  }
+
+  .publication-links > div {
+    justify-content: center; /* center buttons in all viewports */
+  }
+  </style>
+
+
+
   <meta charset="utf-8">
   <meta name="description"
         content="Deform Escher tiles without introducing gaps or overlaps.">
@@ -128,107 +141,58 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
+  
+              <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+              <!-- First row -->
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <span class="link-block">
+                  <a href="https://dl.acm.org/doi/10.1145/3721238.3730681" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-              <!-- paper Link -->
-              <!-- <span class="link-block">
-                <a href="https://dl.acm.org/doi/10.1145/3721238.3730681" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.23388" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
 
-              <!-- arXiv Link -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2506.23388" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
+                <span class="link-block">
+                  <a href="https://example.com" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Example Code</span>
+                  </a>
+                </span>
 
-              <!-- Code -->
-               <!-- <span class="link-block">
-                <a href="https://github.com/Nowwin/escher-tile-deformer-examples/tree/main" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Example Code</span>
-                </a>
-              </span> -->
+                <span class="link-block">
+                  <a href="./files/escher_tile_poster.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Poster</span>
+                  </a>
+                </span>
+              </div>
 
-              <!-- Poster -->
-               <!-- <span class="link-block">
-                <a href="./files/escher_tile_poster.pdf" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Poster</span>
-                </a>
-              </span> -->
+              <!-- Second row -->
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.5;">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Slides (Coming Soon)</span>
+                  </a>
+                </span>
 
-              <!-- Slides Coming Soon -->
-              <!-- <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" 
-                  style="pointer-events:none; opacity:0.5;">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Slides (Coming Soon)</span>
-                </a>
-              </span> -->
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.5;">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Library (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
 
-              <!-- Library Coming Soon -->
-              <!-- <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" 
-                  style="pointer-events:none; opacity:0.5;">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Library (Coming Soon)</span>
-                </a>
-              </span> -->
-
-
-              <div style="display: flex; gap: 10px; flex-wrap: nowrap; flex-direction: row;">
-              <!-- Paper -->
-              <span class="link-block">
-                <a href="paper.pdf" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-
-              <!-- arXiv -->
-              <span class="link-block">
-                <a href="https://arxiv.org" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-
-              <!-- Example Code -->
-              <span class="link-block">
-                <a href="https://example.com" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Example Code</span>
-                </a>
-              </span>
-
-              <!-- Poster -->
-              <span class="link-block">
-                <a href="./files/escher_tile_poster.pdf" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Poster</span>
-                </a>
-              </span>
-
-              <!-- Slides Coming Soon -->
-              <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.5;">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Slides (Coming Soon)</span>
-                </a>
-              </span>
-
-              <!-- Library Coming Soon -->
-              <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.5;">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Library (Coming Soon)</span>
-                </a>
-              </span>
             </div>
+
 
 
             </div>
